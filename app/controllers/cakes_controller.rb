@@ -9,7 +9,7 @@ class CakesController < ApplicationController
   end
 
   def new
-
+    @cake = Cake.new
     authorize @cake
   end
 
