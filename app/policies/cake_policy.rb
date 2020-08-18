@@ -2,6 +2,9 @@ class CakePolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
+
+      # For a multi-tenant SaaS app, you may want to use:
+      # scope.where(user: user)
     end
   end
   def create?
@@ -15,6 +18,6 @@ class CakePolicy < ApplicationPolicy
   end
 
   def destroy?
-    record.user == user
+    update?
   end
 end
