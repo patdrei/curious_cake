@@ -1,0 +1,14 @@
+<!-- app/views/articles/_form.html.erb -->
+<div class="form">
+  <%= simple_form_for(cake) do |f| %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+    <%= f.input :description %>
+    <%= f.input :requested_compensation %>
+    <%= f.input :requested_compensation %>
+    <%= f.input :requested_compensation %>
+    <div id="cake-button">
+      <%= f.button :submit %>
+    </div>
+    </div>
+  <% end %>
+</div>
