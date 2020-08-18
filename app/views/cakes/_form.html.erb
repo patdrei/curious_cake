@@ -4,11 +4,7 @@
     <%= f.input :photos, as: :file, input_html: { multiple: true } %>
     <%= f.input :description %>
     <%= f.input :requested_compensation %>
-    <%= f.input :requested_compensation %>
-    <%= f.input :requested_compensation %>
-    <div id="cake-button">
-      <%= f.button :submit %>
-    </div>
+    <%= f.button :submit, class: "cake-button" %>
     </div>
   <% end %>
 </div>
