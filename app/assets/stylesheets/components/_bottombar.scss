@@ -1,0 +1,16 @@
+.bottombar{
+  justify-content: space-between;
+  background: #660013;
+  position: fixed;
+  bottom: 0px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.bottombar h4{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+}
