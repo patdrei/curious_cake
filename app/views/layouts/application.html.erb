@@ -11,7 +11,23 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
+<body class="bg-dark" style="background-image: url(<%= asset_path('cake3.jpg') %>); background-attachment: fixed; width: 100vw">
+<nav class="navbar navbar-dark justify-content-between sticky-top" style="background-color: rgba(70, 70, 70, 0.4); backdrop-filter: blur(4px)">
+    <div class="d-flex">
+  <form class="form-inline ml-4 mr-4">
+    <%= link_to cakes_path, { class: "btn btn-success" } do %>
+  <span class="label label-success">All Cakes</span>
+<% end %>
+</form>
+  <form class="form-inline">
+    <%= link_to new_cake_path, { class: "btn btn-outline-success" } do %>
+  <span class="label label-success">Add a Cake</span>
+<% end %>
+</form>
+</div>
+</nav>
+  <div class="container">
     <%= yield %>
+  </div>
   </body>
 </html>
