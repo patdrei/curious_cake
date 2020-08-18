@@ -38,6 +38,7 @@ class CakesController < ApplicationController
   end
 
   def destroy
+    @cake.destroy
   end
 
     private
@@ -49,7 +50,7 @@ class CakesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def cake_params
-      params.require(:cake).permit(:description, :ingredients, :requested_compensation, :available_slices, :user_id)
+      params.require(:cake).permit(:description, :ingredients, :requested_compensation, :available_slices, :name, :eat_by)
     end
 
 end
