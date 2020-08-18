@@ -48,7 +48,7 @@ class CakesController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
-    def restaurant_params
+    def cake_params
       params.require(:cake).permit(:description, :ingredients, :requested_compensation, :available_slices, :user_id)
     end
 
