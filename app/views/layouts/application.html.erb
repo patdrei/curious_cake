@@ -11,6 +11,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
+
 <body class="bg-white" >
     <%= render '/layouts/navbar' %>
     <div class="d-flex">
@@ -29,6 +30,6 @@
   <div class="container">
     <%= yield %>
   </div>
- <div> <%= render '/layouts/bottombar' %></div>
+ <div> <%#= render '/layouts/bottombar' %></div>
   </body>
 </html>
