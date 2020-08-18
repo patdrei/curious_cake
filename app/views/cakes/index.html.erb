@@ -1,2 +1,3 @@
-
-<p>Find me in app/views/cakes/index.html.erb</p>
+<% @cakes.each do |cake| %>
+  <p><%= cake.name %></p>
+<% end %>
