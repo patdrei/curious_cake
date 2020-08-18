@@ -39,6 +39,7 @@ gem "ruby_parser"
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.12.0'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'pundit'
 
 group :development, :test do
   gem 'pry-byebug'
