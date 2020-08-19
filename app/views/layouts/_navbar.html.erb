@@ -8,9 +8,13 @@
   <h1 class="label-success"> Crazy Curious Cakes</h1>
 
 <% if user_signed_in? %>
-  <p class="btn btn-outline-danger align-self-end"> <%= link_to('Logout', destroy_user_session_path, method: :delete) %> </p>
+  <!--  <p class="btn btn-outline-danger align-self-end"> <%= link_to('Logout', destroy_user_session_path, method: :delete) %> </p> -->
+  <form class="form-inline">
+    <%= link_to destroy_user_session_path, { class: "btn btn-outline-danger" } do %>
+  <span class="label label-success">Logout</span>
+<% end %>
+</form>
 <% else %>
-  </form>
   <form class="form-inline">
     <%= link_to new_user_session_path, { class: "btn btn-outline-success" } do %>
   <span class="label label-success">Login</span>
