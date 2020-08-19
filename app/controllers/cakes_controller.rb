@@ -7,6 +7,7 @@ class CakesController < ApplicationController
   end
 
   def show
+    payment_methods
   end
 
   def new
@@ -39,6 +40,10 @@ class CakesController < ApplicationController
 
   def destroy
     @cake.destroy
+  end
+
+  def payment_methods
+    @payments = @cake.requested_compensation.split(",")
   end
 
     private
