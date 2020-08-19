@@ -13,4 +13,29 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+.label-one{
+  width: 40%;
+  border-radius: 10px;
+  background-color: rgb(151, 115, 144);
+  color: white;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 114%;
+  text-align: center;
+  letter-spacing: 0.75px;
+}
 
+.label-two{
+  width: 40%;
+  border-radius: 10px;
+  background-color: rgb(255, 214, 218);
+  color: rgb(102, 0, 19);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 114%;
+  text-align: center;
+  letter-spacing: 0.75px;
+
+}
