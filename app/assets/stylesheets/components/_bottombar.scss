@@ -1,6 +1,7 @@
 .bottombar{
   justify-content: space-between;
-  background: #660013;
+  background-color: rgba(102, 0, 19, 0.9);
+  backdrop-filter: blur(4px);
   position: fixed;
   bottom: 0px;
   font-family: 'Roboto', sans-serif;
