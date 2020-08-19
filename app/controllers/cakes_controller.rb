@@ -52,5 +52,4 @@ class CakesController < ApplicationController
     def cake_params
       params.require(:cake).permit(:description, :ingredients, :requested_compensation, :available_slices, :name, :eat_by)
     end
-
 end
