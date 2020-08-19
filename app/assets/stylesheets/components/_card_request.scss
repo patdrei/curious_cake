@@ -18,7 +18,7 @@
 }
 
 .notification small {
-  color: #999999;
+  color: pink;
   font-weight: bold;
 }
 .notification .notification-actions {
@@ -32,11 +32,27 @@
 }
 
 .notification .notification-actions a {
-  color: #999999;
+  color: pink;
   margin-left: 16px;
   font-size: 14px;
 }
 
 .notification .notification-actions a:hover {
-  color: #555555;
+  color: black;
+}
+
+.notification .avatar-request {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+}
+
+.box {
+display: inline-block;
+padding: 5px;
+border: 2px solid grey;
+border-radius: 50px;
+}
+.box p {
+  font-size: 10px;
 }
