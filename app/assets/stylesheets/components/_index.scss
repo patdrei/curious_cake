@@ -5,6 +5,7 @@
 @import "button";
 @import "form";
 @import "bottombar";
+@import "card";
 
 .container {
   margin: 0 auto;
@@ -15,7 +16,8 @@
 
 .page-inline-headers {
   text-align: center;
-  color: white;
+  color: rgb(102, 0, 19);
+  font-size: 24px;
 }
 
 .center-everything {

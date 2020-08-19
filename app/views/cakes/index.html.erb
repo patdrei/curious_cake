@@ -1,3 +1,9 @@
 <% @cakes.each do |cake| %>
-  <p><%= cake.name %></p>
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+      <h2><%= cake.name %></h2>
+      <p><%= cake.ingredients %></p>
+    </div>
+  </div>
 <% end %>
