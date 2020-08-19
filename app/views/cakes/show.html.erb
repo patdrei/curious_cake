@@ -5,8 +5,9 @@
   </div>
   <div class="row justify-content-center mt-3">
     <div class=" row justify-space-around">
-      <div class="label-two mr-3 pt-1 pb-1">payment method 1</div>
-      <div class="label-one pt-1 pb-1">payment method 2</div>
+      <% @payments.each_with_index do |payment, i| %>
+        <div class="label-<%=i+1%>"> <%=  payment %> </div>
+      <% end %>
     </div>
   </div>
   <div class="mt-3">
@@ -18,3 +19,35 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+<!-- <div class="container text-center">
+    <h1><%= @cake.name  %></h1>
+    <div class="row justify-content-center">
+      <%= cl_image_tag @cake.photo.key, height: 300, width: 400, crop: :fill %>
+    </div>
+    <div class="row justify-content-center mt-3">
+        <% @payments.each_with_index do |payment, i| %>
+        <div class="col-4">
+          <div class="label-<%= i+1 %> mr-3 pt-1 pb-1">
+            <%= payment %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="mt-3">
+      <p><%= @cake.description  %></p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="cake-button pt-1 pb-1">
+        <%= link_to "request", new_cake_request_path(@cake) %>
+      </div>
+    </div>
+</div>
+ -->
