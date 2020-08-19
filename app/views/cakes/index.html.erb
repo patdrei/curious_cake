@@ -1,9 +1,9 @@
 <% @cakes.each do |cake| %>
   <div class="card-product">
-    <% if cake.photo.nil? %>
-      <%= cl_image_tag @cake.photo.key, height: 300, width: 400, crop: :fill ,class: "img"%>
+    <% if cake.photo.attached? %>
+      <%= cl_image_tag cake.photo.key, height: 300, width: 400, crop: :fill ,class: "img"%>
     <% else %>
-    <img src="https://images.squarespace-cdn.com/content/v1/59a2ccae6f4ca3e5e083e88f/1513817365291-66JTKOOZMX92XHITHXL5/ke17ZwdGBToddI8pDm48kKlCTFxidccknsm1vdd2hc9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIGrHOLo6PPE-cvgMUevVYsFUAYQrTS26zLAU8hbtgbMQKMshLAGzx4R3EDFOm1kBS/Kenwood_Jordan_Food%2829of32%29.jpg">
+      <img src="https://images.squarespace-cdn.com/content/v1/59a2ccae6f4ca3e5e083e88f/1513817365291-66JTKOOZMX92XHITHXL5/ke17ZwdGBToddI8pDm48kKlCTFxidccknsm1vdd2hc9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIGrHOLo6PPE-cvgMUevVYsFUAYQrTS26zLAU8hbtgbMQKMshLAGzx4R3EDFOm1kBS/Kenwood_Jordan_Food%2829of32%29.jpg">
     <% end  %>
     <div class="card-product-infos">
       <h2><%= cake.name %></h2>
