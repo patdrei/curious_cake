@@ -1,4 +1,5 @@
 <% @cakes.each do |cake| %>
+<%= link_to cake_path(cake) do%>
   <div class="card-product">
     <% if cake.photo.attached? %>
       <%= cl_image_tag cake.photo.key, height: 300, width: 400, crop: :fill ,class: "img"%>
@@ -10,4 +11,5 @@
       <p><%= cake.description %></p>
     </div>
   </div>
+<% end %>
 <% end %>
