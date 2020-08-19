@@ -1,0 +1,13 @@
+<!-- app/views/articles/_form.html.erb -->
+<div class="form">
+  <%= simple_form_for(request) do |f| %>
+    <%= f.input :available_slices %>
+    <%= f.input :description %>
+    <div class="center-everything">
+      <%= f.input :photo, as: :file %>
+    </div>
+    <%= f.input :requested_compensation %>
+    <%= f.button :submit, class: "cake-button" %>
+    </div>
+  <% end %>
+</div>
