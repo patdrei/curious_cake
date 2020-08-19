@@ -1,3 +1,17 @@
+<div class="d-flex">
+  <form class="form-inline ml-4 mr-4 mb-0">
+    <%= link_to cakes_path, { class: "btn btn-success" } do %>
+  <span class="label label-success">All Cakes</span>
+<% end %>
+</form>
+  <form class="form-inline">
+    <%= link_to new_cake_path, { class: "btn btn-outline-success" } do %>
+  <span class="label label-success">Add a Cake</span>
+<% end %>
+</form>
+</div>
+
+
 <% @cakes.each do |cake| %>
   <div class="card-product">
     <% if cake.photo.attached? %>
