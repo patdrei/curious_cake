@@ -40,6 +40,7 @@ class CakesController < ApplicationController
 
   def destroy
     @cake.destroy
+    redirect_to cakes_path
   end
 
   def payment_methods
