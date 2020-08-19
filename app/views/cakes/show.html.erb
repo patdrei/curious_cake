@@ -15,7 +15,11 @@
   </div>
   <div class="row justify-content-center">
     <div class="cake-button pt-1 pb-1">
-      <%= link_to "request", new_cake_request_path(@cake) %>
+      <%= link_to "Requetsts", new_cake_request_path(@cake) %>
+    </div>
+
+    <div class="cake-button btn-danger pt-1 pb-1">
+      <%= link_to "Delete Cake", cake_path(@cake), method: :delete %>
     </div>
   </div>
 </div>
