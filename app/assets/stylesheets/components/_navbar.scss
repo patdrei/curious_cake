@@ -9,15 +9,6 @@
 // .navbar h1{
 //   color: white;
 // }
-
-
-
-  @media(max-width: 578px)  {
-    .navbar h1{
-      display: none;
-    }
-  }
-
 // .plus{
 //   font-size: 100;
 // }
@@ -28,17 +19,16 @@
   border-color: #FFD6DA;
 }
 
-.icon{
+#icon{
+
   color: white;
   font-size: 50px;
   text-decoration:none;
 }
 
 
-.icon:hover{
+#icon:hover{
   color: #FFD6DA;
-  text-decoration:none;
-
 }
 // .navbar-lewagon .navbar-collapse {
 //   flex-grow: 0;
@@ -47,3 +37,12 @@
 // .navbar-lewagon .navbar-brand img {
 //   width: 40px;
 // }
+
+
+
+  @media(max-width: 578px)  {
+    .navbar h1{
+      display: none;
+    }
+  }
+
