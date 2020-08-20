@@ -1,6 +1,8 @@
 
   <div class="title">
-    <%= cl_image_tag @cake.photo.key, class: "avatar-request" %>
+    <% if @cake.photo.attached? %>
+      <%= cl_image_tag @cake.photo.key, class: "avatar-request" %>
+      <% end %>
     <h1 class="page-inline-headers"><%= @cake.name %></h1>
   </div>
 
