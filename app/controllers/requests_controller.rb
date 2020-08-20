@@ -12,6 +12,7 @@ class RequestsController < ApplicationController
     @request = Request.new
     authorize @request
     set_cake
+    payment_methods
   end
 
   def create
@@ -42,7 +43,12 @@ class RequestsController < ApplicationController
     @request.destroy
   end
 
+
   private
+
+  def payment_methods
+    @payments = @cake.requested_compensation.split(",")
+  end
 
     # Use callbacks to share common setup or constraints between actions.
   def set_request

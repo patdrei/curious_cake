@@ -1,12 +1,17 @@
 <!-- app/views/articles/_form.html.erb -->
-<div class="form">
-  <%= simple_form_for(request) do |f| %>
-    <%= f.input :available_slices %>
-    <%= f.input :description %>
-    <div class="center-everything">
-      <%= f.input :photo, as: :file %>
+
+<div class="form_request" >
+  <%= simple_form_for [cake, request] do |f| %>
+<div class="row justify-content-center mt-3">
+    <div class=" row justify-space-around">
+      <% @payments.each_with_index do |payment, i| %>
+        <div class="label-<%=i+1%>"> <%=  payment %> </div>
+      <% end %>
     </div>
-    <%= f.input :requested_compensation %>
+  </div>
+<br>
+    <%= f.input :content, label: 'Write your maessage here' %>
+
     <%= f.button :submit, class: "cake-button" %>
     </div>
   <% end %>
