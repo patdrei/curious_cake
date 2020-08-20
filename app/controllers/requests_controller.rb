@@ -1,7 +1,7 @@
 class RequestsController < ApplicationController
   before_action :set_request, only: [:show, :edit, :update, :destroy]
   def index
-    @cake = set_cake
+    set_cake
     @requests = @cake.requests
   end
 
@@ -11,12 +11,12 @@ class RequestsController < ApplicationController
   def new
     @request = Request.new
     authorize @request
-    @cake = Cake.find(params[:cake_id])
+    set_cake
   end
 
   def create
     @request = Request.new(request_params)
-    @cake = Cake.find(params[:cake_id])
+    set_cake
     @user = current_user
     @request.cake = @cake
     @request.user = @user
