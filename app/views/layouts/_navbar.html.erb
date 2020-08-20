@@ -1,8 +1,11 @@
 <div class="navbar justify-content-between sticky-top " >
    <div class="d-flex">
     <form class="form-inline">
-      <%= link_to new_cake_path do %>
-        <span class="label label-primary hover">Add Cake</span>
+      <%= link_to new_cake_path, { class: "login-button-nav hover", style: "text-decoration:none;" }  do %>
+        <span>
+        <i class="fas fa-heart mr-2"></i>
+        Add Cake
+        </span>
       <% end %>
     </form>
   </div>
@@ -23,14 +26,14 @@
     <% if user_signed_in? %>
       <!--  <p class="btn btn-outline-danger align-self-end"> <%= link_to('Logout', destroy_user_session_path, method: :delete) %> </p> -->
       <form class="form-inline">
-        <%= link_to destroy_user_session_path, { class: "btn btn-outline-danger", method: "delete" } do %>
-          <span class="label label-success">Logout</span>
+        <%= link_to destroy_user_session_path, { class: "login-button-nav hover", method: "delete",  style: "text-decoration:none;" } do %>
+          <span>Logout</span>
         <% end %>
       </form>
     <% else %>
       <form class="form-inline">
-        <%= link_to new_user_session_path, { class: "btn btn-outline-success" } do %>
-          <span class="label label-success">Login</span>
+        <%= link_to new_user_session_path, { class: "login-button-nav hover",  style: "text-decoration:none;" } do %>
+          <span>Login</span>
        <% end %>
       </form>
     <% end %>
