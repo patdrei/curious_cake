@@ -66,9 +66,13 @@ border-radius: 50px;
 }
 
 .accepted {
-  border-color: rgba(0, 255, 0, 0.2);
+  border-color: rgba(0, 255, 0, 0.4);
 }
 
 .declined {
-background-color: rgba(255, 0, 0, 0.2);
+border-color: rgba(255, 0, 0, 0.4);
+}
+
+.declined:hover {
+  background-color: rgba(255, 0, 0, 0.5);
 }
