@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   patch "/requests/:id/accept", to: "requests#accept", as: 'accept'
+  patch "/requests/:id/decline", to: "requests#decline", as: 'decline'
+
   resources :cakes do
     resources :requests, only: [:create, :new, :index]
   end

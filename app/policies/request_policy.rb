@@ -30,4 +30,8 @@ class RequestPolicy < ApplicationPolicy
   def accept?
     record.cake.user == user
   end
+
+  def decline?
+    record.cake.user == user
+  end
 end

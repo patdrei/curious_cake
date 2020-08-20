@@ -47,6 +47,14 @@ class RequestsController < ApplicationController
     set_request
     @request.status = "accepted"
     @request.save
+    redirect_to cake_requests_path(@request.cake)
+  end
+
+  def decline
+    set_request
+    @request.status = "declined"
+    @request.save
+    redirect_to cake_requests_path(@request.cake)
   end
 
   private
