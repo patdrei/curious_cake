@@ -1,17 +1,14 @@
 
-<div class="container">
-
-  <div class="box_request">
+  <div class="title">
+    <%= cl_image_tag @cake.photo.key, class: "avatar-request" %>
     <h1 class="page-inline-headers"><%= @cake.name %></h1>
   </div>
 
   <br>
-  <div class="container-form">
+<div class="request-form">
     <h3 class="page-inline-headers">Choose Payment Option</h3>
     <br>
     </p><%= render 'form', request: @request, cake: @cake %></p>
-  </div>
-
 </div>
 
 

@@ -63,10 +63,11 @@
 }
 
 .request-button {
-  width: 40%;
+  width: flex;
+  border: 1px solid rgb(151, 115, 144);
   border-radius: 10px;
   background-color: rgb(255, 214, 218);
-  color: white;
+  color: rgb(151, 115, 144);
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
