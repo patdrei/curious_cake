@@ -7,6 +7,7 @@
 @import "bottombar";
 @import "card";
 @import "card_request";
+@import "banner";
 
 .container {
   margin: 0 auto;
@@ -25,3 +26,14 @@
   display: flex;
   flex-items: center;
 }
+
+.lp-picture {
+  width: 100%;
+  height: 20%;
+  object-fit: cover;
+}
+
+.link-styling {
+  color: rgb(102, 0, 19);
+}
+

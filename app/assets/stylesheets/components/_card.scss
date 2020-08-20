@@ -21,6 +21,12 @@
   color: #660013;
 }
 
+.card-product h6 {
+  font-size: 12px;
+  margin: 0;
+  color: #660013;
+}
+
 .card-product p {
   font-size: 12px;
   line-height: 1.4;
@@ -32,4 +38,13 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+.card-product:hover {
+  background-color: rgb(255, 214, 218);
+}
+
+.fas {
+  font-size: 50px;
+  color: #660013;
 }
