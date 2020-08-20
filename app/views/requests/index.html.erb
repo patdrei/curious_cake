@@ -1,4 +1,6 @@
+<%= @cake.name %>
 <% @requests.each do |request|%>
 <%= request.content %>
+<%= link_to "accept", accept_path(request), method: :patch %>
 <% end %>
 

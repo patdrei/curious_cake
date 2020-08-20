@@ -20,6 +20,7 @@ class RequestsController < ApplicationController
     @user = current_user
     @request.cake = @cake
     @request.user = @user
+    @request.status = "pending"
     if @requests.save
       redirect_to cake_path(@cake), notice: 'You have successfully requestsed this cake'
     else
@@ -40,6 +41,12 @@ class RequestsController < ApplicationController
 
   def destroy
     @request.destroy
+  end
+
+  def accept
+    set_request
+    @request.status = "accepted"
+    @request.save
   end
 
   private

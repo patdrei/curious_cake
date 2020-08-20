@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  patch "/requests/:id/accept", to: "requests#accept", as: 'accept'
   resources :cakes do
     resources :requests, only: [:create, :new, :index]
   end
@@ -6,4 +7,5 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
 end
