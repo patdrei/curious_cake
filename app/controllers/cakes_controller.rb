@@ -8,6 +8,7 @@ class CakesController < ApplicationController
 
   def show
     payment_methods
+    current_user == @cake.user ? @owner = true : @owner = false
   end
 
   def new
