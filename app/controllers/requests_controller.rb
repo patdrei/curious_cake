@@ -1,8 +1,8 @@
 class RequestsController < ApplicationController
   before_action :set_request, only: [:show, :edit, :update, :destroy]
   def index
+    @requests = policy_scope(Request).order(created_at: :desc).where(cake_id: params[:cake_id])
     set_cake
-    @requests = @cake.requests
   end
 
   def show
