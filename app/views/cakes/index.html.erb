@@ -1,17 +1,14 @@
-<%= form_tag cakes_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a Cake"
-  %>
+<div class="searchbar">
+  <%= form_tag cakes_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control input-field-searchbar",
+      placeholder: "Find a Cake"
+      %>
 
-  <%#= text_field_tag :syllabus_text,
-    params[:syllabus_text],
-    class: "form-control",
-    placeholder: "Find within syllabus"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
+    <%= submit_tag "Search", class: "btn btn-primary input-btn-searchbar" %>
+  <% end %>
+</div>
 
 <% @cakes.each do |cake| %>
 <%= link_to cake_path(cake) do%>
