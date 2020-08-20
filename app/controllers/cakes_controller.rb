@@ -2,12 +2,17 @@ class CakesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
   before_action :set_cake, only: [:show, :edit, :update, :destroy]
   def index
-    @cakes = policy_scope(Cake).order(created_at: :desc)
+    if params[:query].present?
+      @cakes = policy_scope(Cake).search_by_name_and_description(params[:query])
+    else
+      @cakes = policy_scope(Cake).order(created_at: :desc)
+    end
     # @cakes = Cake.all
   end
 
   def show
     payment_methods
+    current_user == @cake.user ? @owner = true : @owner = false
   end
 
   def new

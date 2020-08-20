@@ -1,3 +1,15 @@
+<div class="searchbar">
+  <%= form_tag cakes_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control input-field-searchbar",
+      placeholder: "Find a Cake"
+      %>
+
+    <%= submit_tag "Search", class: "btn btn-primary input-btn-searchbar" %>
+  <% end %>
+</div>
+
 <% @cakes.each do |cake| %>
 <%= link_to cake_path(cake) do%>
   <div class="card-product">
