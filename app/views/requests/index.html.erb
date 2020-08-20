@@ -1,6 +1,21 @@
-<%= @cake.name %>
+<h1 class="py-3" >Requests for your <%= @cake.name %></h1>
 <% @requests.each do |request|%>
-<%= request.content %>
-<%= link_to "accept", accept_path(request), method: :patch %>
+
+
+<div class="notification <%= request.status %> ">
+  <img src='https://images.unsplash.com/photo-1564228511783-821f2f547f44?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1364&q=80' class="avatar-large"/>
+  <div class="notification-content">
+    <p><small> <%= request.user.email %> </small></p>
+    <p> <%= request.content %></p>
+    <div class='box'>
+      <p>2€</p>
+    </div>
+  </div>
+  <div class="notification-actions">
+    <%= link_to "accept", accept_path(request), method: :patch %>
+    <%= link_to "decline", decline_path(request), method: :patch %>
+  </div>
+</div>
+
 <% end %>
 

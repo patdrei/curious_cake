@@ -18,7 +18,7 @@
 }
 
 .notification small {
-  color: pink;
+  color: grey;
   font-weight: bold;
 }
 .notification .notification-actions {
@@ -32,7 +32,7 @@
 }
 
 .notification .notification-actions a {
-  color: pink;
+  color: grey;
   margin-left: 16px;
   font-size: 14px;
 }
@@ -55,4 +55,12 @@ border-radius: 50px;
 }
 .box p {
   font-size: 10px;
+}
+
+.accepted {
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+.declined {
+background-color: rgba(255, 0, 0, 0.2);
 }
