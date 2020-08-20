@@ -1,25 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CuriousCake</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-<div class="container">
-  <div class="banner mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/assets/Cake_LP.jpg');
-    background-position:top;">
-    <h1 class="pl-15">Are you ShaKe yet?</h1>
-  </div>
-  <div class="card-product pl-5">
-    <span><i class="card-icon fas fa-birthday-cake"></i></span>
-    <div class="card-product-infos"; onclick="location.href='#'">
-      <%= link_to "Light up your day by finding a cake", cakes_path, { class: "link-styling", style: "text-decoration:none; color: rgba(102, 0, 19, 0.9);" } %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+  </head>
+
+  <body>
+    <div class="taker p-0">
+      <div class="banner ml-0 mr-0" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/assets/Cake_LP.jpg');">
+        <% if user_signed_in? %>
+      <!--  <p class="btn btn-outline-danger align-self-end"> <%= link_to('Logout', destroy_user_session_path, method: :delete) %> </p> -->
+        <form class="form-inline">
+          <%= link_to destroy_user_session_path, { class: "login-button", method: "delete", style: "text-decoration:none; color: rgba(102, 0, 19, 0.9);" } do %>
+            <span class="label label-success">Logout</span>
+          <% end %>
+        </form>
+      <% else %>
+        <form class="form-inline">
+          <%= link_to new_user_session_path, { class: "login-button", style: "text-decoration:none; color: rgba(102, 0, 19, 0.9);" } do %>
+            <span class="label label-success">Login</span>
+         <% end %>
+        </form>
+      <% end %>
+        <h1 class="pl-15">Are you ShaKe yet?</h1>
+      </div>
+      <div class="product-wrapper">
+        <div class="card-product pl-5">
+          <span><i class="card-icon fas fa-birthday-cake"></i></span>
+          <div class="card-product-infos"; onclick="location.href='#'">
+            <%= link_to "Light up your day by finding a cake", cakes_path, { class: "link-styling", style: "text-decoration:none; color: rgba(102, 0, 19, 0.9);" } %>
+          </div>
+        </div>
+         <div class="card-product pl-5">
+          <span><i class="card-icon fas fa-hand-holding"></i></span>
+          <div class="card-product-infos">
+            <%= link_to "Light up somebody's day by offering a cake", new_cake_path(@cake), { class: "link-styling", style: "text-decoration:none; color: rgba(102, 0, 19, 0.9);" }  %>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-   <div class="card-product pl-5">
-    <span><i class="card-icon fas fa-hand-holding"></i></span>
-    <div class="card-product-infos">
-      <%= link_to "Light up somebody's day by offering a cake", new_cake_path(@cake), { class: "link-styling", style: "text-decoration:none; color: rgba(102, 0, 19, 0.9);" }  %>
-    </div>
-  </div>
-  <br>
-  <br>
-  <br>
-</div>
+  </body>
+</html>
 
 
 
