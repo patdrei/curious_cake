@@ -1,7 +1,11 @@
+body {
+  background-color: white;
+}
+
 .banner {
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
+  background-size: center;
+  background-position: 20% 25%;
+  height: 55%;
   position: relative;
 }
 
@@ -24,3 +28,10 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
+.taker {
+  position: absolute; top: 0; left: 0; height: 100%; width: 100%;
+}
+
+.product-wrapper {
+  height: 35%;
+}
