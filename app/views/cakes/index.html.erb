@@ -1,12 +1,3 @@
-<div class="d-flex">
-  <form class="form-inline mt-3">
-    <%= link_to new_cake_path, { class: "btn btn-primary" } do %>
-  <span class="label label-primary">Add a Cake</span>
-<% end %>
-</form>
-</div>
-
-
 <% @cakes.each do |cake| %>
 <%= link_to cake_path(cake) do%>
   <div class="card-product">
