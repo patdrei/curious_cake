@@ -7,6 +7,10 @@
   border: 1px solid rgb(235,235,235);
 }
 
+.notification:hover {
+  background-color: $pink;
+}
+
 .notification .notification-content {
   flex-grow: 1;
   padding: 0 24px;
@@ -18,7 +22,7 @@
 }
 
 .notification small {
-  color: pink;
+  color: grey;
   font-weight: bold;
 }
 .notification .notification-actions {
@@ -32,7 +36,7 @@
 }
 
 .notification .notification-actions a {
-  color: pink;
+  color: grey;
   margin-left: 16px;
   font-size: 14px;
 }
@@ -55,4 +59,20 @@ border-radius: 50px;
 }
 .box p {
   font-size: 10px;
+}
+
+.accepted:hover {
+  background-color: rgba(0, 255, 0, 0.2);
+}
+
+.accepted {
+  border-color: rgba(0, 255, 0, 0.4);
+}
+
+.declined {
+border-color: rgba(255, 0, 0, 0.4);
+}
+
+.declined:hover {
+  background-color: rgba(255, 0, 0, 0.5);
 }

@@ -26,4 +26,12 @@ class RequestPolicy < ApplicationPolicy
   def destroy?
     update?
   end
+
+  def accept?
+    record.cake.user == user
+  end
+
+  def decline?
+    record.cake.user == user
+  end
 end

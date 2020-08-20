@@ -29,4 +29,8 @@ class CakePolicy < ApplicationPolicy
   def destroy?
     update?
   end
+
+  def index?
+    true
+  end
 end
