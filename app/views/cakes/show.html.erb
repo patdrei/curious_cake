@@ -1,25 +1,30 @@
 <div class="text-center">
-  <h1><%= @cake.name  %></h1>
+  <h1 class="page-inline-headers mt-3"><%= @cake.name  %></h1>
     <% if @cake.photo.attached? %>
-      <div class="row justify-content-center">
+      <div class="row justify-content-center mb-3 shadow-sm">
         <%= cl_image_tag @cake.photo.key, height: 300, width: 400, crop: :fill %>
       </div>
     <% end %>
-  <div class="row justify-content-center mt-3">
-    <div class=" row justify-space-around">
-      <% @payments.each_with_index do |payment, i| %>
-        <div class="label-<%=i+1%>"> <%=  payment %> </div>
-      <% end %>
-    </div>
+    <div class="outside-border">
+      <p class="description">Payment methods offered </p>
+      <div class="row justify-content-center">
+        <div class="row justify-space-around">
+          <% @payments.each_with_index do |payment, i| %>
+            <div class="label-<%=i+1%>"> <%=  payment %> </div>
+          <% end %>
+        </div>
+      </div>
   </div>
-  <div class="mt-3">
-    <p><%= @cake.description  %></p>
+  <div class="mt-3 outside-border">
+    <p class="description">Description</p>
+    <p class="mb-0"><%= @cake.description %></p>
   </div>
-  <div class="mt-3">
-    <p><%= @cake.calculated_slices ? @cake.calculated_slices : @cake.available_slices %></p>
+  <div class="mt-3 outside-border">
+    <p class="description">Available slices</p>
+    <p class="mb-0"><%= @cake.calculated_slices ? @cake.calculated_slices : @cake.available_slices %></p>
   </div>
   <div class="row justify-content-center">
-    <div class="cake-button pt-1 pb-1">
+    <div class="cake-button mt-3">
       <%= link_to "Request this Cake", new_cake_request_path(@cake) %>
     </div>
     </div>
