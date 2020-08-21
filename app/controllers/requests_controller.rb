@@ -49,9 +49,10 @@ class RequestsController < ApplicationController
     @request.status = "accepted"
     @request.save
     @cake = @request.cake
-    @cake.calculated_slices = @cake.available_slices - @request.requested_slices
+    @cake.calculated_slices -= @request.requested_slices
     @cake.save
-    redirect_to cake_requests_path(@request.cake)
+    # redirect_to cake_requests_path(@request.cake)
+    redirect_to :back
   end
 
   def decline
@@ -79,6 +80,6 @@ class RequestsController < ApplicationController
   end
 
   def request_params
-    params.require(:request).permit(:cake_id, :user_id, :requested_slices, :status, :compensation_offered, :content)
+    params.require(:request).permit(:cake_id, :user_id, :requested_slices, :status, :compensation_offered, :content, :calculated_slices)
   end
 end

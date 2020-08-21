@@ -26,7 +26,7 @@
   font-weight: bold;
 }
 .notification .notification-actions {
-  opacity: 0;
+  opacity: 0.7;
   display: flex;
   transition: ease .3s;
 }
@@ -63,16 +63,18 @@ border-radius: 50px;
 
 .accepted:hover {
   background-color: rgba(0, 255, 0, 0.2);
+  border-left: 12px solid rgba(100, 255, 100, 0.8);
 }
 
 .accepted {
-  border-color: rgba(0, 255, 0, 0.4);
+  border-left: 12px solid rgba(100, 255, 100, 0.5);
 }
 
 .declined {
-border-color: rgba(255, 0, 0, 0.4);
+border-left: 12px solid rgba(255, 100, 100, 0.5);
 }
 
 .declined:hover {
+  border-left: 12px solid rgba(255, 100, 100, 0.8);
   background-color: rgba(255, 0, 0, 0.5);
 }

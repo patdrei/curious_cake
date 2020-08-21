@@ -1,4 +1,7 @@
-<h1 class="py-3" >Requests for your <%= @cake.name %></h1>
+<h1 class="p-3 center" >Requests for your <%= @cake.name %></h1>
+
+<div class="border-left pl-1 ml-3 mb-1"><h3> <strong><%= @cake.calculated_slices %></strong>  slices available</h3></div>
+
 <% @requests.each do |request|%>
 
 
@@ -7,11 +10,12 @@
   <div class="notification-content">
     <p><small> <%= request.user.email %> </small></p>
     <p> <%= request.content %></p>
-    <div class='box'>
+    <div class='border-left border-primary pl-2'>
       <p> <%= request.compensation_offered %></p>
     </div>
   </div>
   <div class="notification-actions">
+
     <%= link_to "messages", new_request_message_path(request) %>
     <%= link_to "accept", accept_path(request), method: :patch %>
     <%= link_to "decline", decline_path(request), method: :patch %>
