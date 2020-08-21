@@ -21,6 +21,7 @@
     <div class="card-product-infos">
       <h2><%= cake.name %></h2>
       <p><%= cake.description %></p>
+      <p><%= cake.calculated_slices ? cake.calculated_slices : cake.available_slices %></p>
     </div>
   </div>
 <% end %>

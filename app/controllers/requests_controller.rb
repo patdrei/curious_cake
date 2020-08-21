@@ -23,7 +23,7 @@ class RequestsController < ApplicationController
     @request.user = @user
     @request.status = "pending"
     if @request.save
-      redirect_to cake_path(@cake), notice: 'You have successfully requestsed this cake'
+      redirect_to cake_path(@cake), notice: 'You have successfully requested this cake'
     else
       render :new
     end
@@ -48,6 +48,9 @@ class RequestsController < ApplicationController
     set_request
     @request.status = "accepted"
     @request.save
+    @cake = @request.cake
+    @cake.calculated_slices = @cake.available_slices - @request.requested_slices
+    @cake.save
     redirect_to cake_requests_path(@request.cake)
   end
 
