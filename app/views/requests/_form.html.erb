@@ -3,12 +3,16 @@
   <%= simple_form_for [cake, request] do |f| %>
 <div class="row justify-content-center mt-3">
     <div class=" row justify-space-around">
+      <% payments = [] %>
       <% @payments.each_with_index do |payment, i| %>
-        <div class="label-<%=i+1%>"> <%=  payment %> </div>
+        <div class="label-<%=((i+1) % 2)+1 %> m-1"> <%=  payment %> </div>
+        <% payments << payment %>
       <% end %>
     </div>
   </div>
 <br>
+    <%= f.input :compensation_offered, collection: payments, input_html: { multiple: false }  %>
+
     <%= f.input :requested_slices, label: "Number of slices" %>
     <%= f.input :content, label: 'Write your message here' %>
     <%= f.button :submit, class: "request-button", value: 'Send' %>

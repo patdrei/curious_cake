@@ -1,16 +1,26 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Cormorant+Garamond:ital@1&family=Quicksand&family=Shadows+Into+Light&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Shadows+Into+Light&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Quicksand&family=Shadows+Into+Light&display=swap');
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+
+$body-font: 'Amatic SC', cursive;
+$headers-font: 'Amatic SC', cursive;
+// $body-font: 'Quicksand', sans-serif;
+// $headers-font: 'Quicksand', sans-serif;
+
+// $body-font: 'Shadows Into Light', cursive;
+// $headers-font: 'Shadows Into Light', cursive;
+
+// $body-font: 'Cormorant Garamond', serif;
+// $headers-font: 'Cormorant Garamond', serif;
+
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
+//   font-family: "BeautifulPeoplePersonalUse";
+//   src:url(asset-path('fonts/BeautifulPeoplePersonalUse-dE0g.ttf'));
 // }
 // $my-font: "Font Name";
