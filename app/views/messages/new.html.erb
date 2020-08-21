@@ -1,10 +1,24 @@
-<%= @request.cake.name %>
+<h2>Request for <%= @request.cake.name %> by <%= @request.user.email %> </h2>
+
+<h3>Messages: </h3>
 
 <% @messages.each do |message| %>
-<%= message.content %> <br>
+
+<div class="notification">
+  <img src='https://images.unsplash.com/photo-1564228511783-821f2f547f44?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1364&q=80' class="avatar-large"/>
+  <div class="notification-content">
+    <p><small> <%= message.user.email %> </small></p>
+    <p> <%= message.content %></p>
+    <div class='box'>
+      <p> <%= message.request.cake.name %></p>
+    </div>
+  </div>
+  <div class="notification-actions">
+  </div>
+</div>
 <% end %>
 
-<div class="form">
+<div class="form w-100">
   <%= simple_form_for [@request, @message] do |f| %>
     <%= f.input :content %>
     <%= f.button :submit, class: "cake-button" %>
