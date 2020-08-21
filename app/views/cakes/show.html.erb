@@ -24,8 +24,9 @@
     </div>
     </div>
     </div>
+    <div class="container-button">
 <% if @owner %>
-<div class="container-button">
+
   <form class="form-inline w-100 mt-3">
       <%= link_to cake_requests_path(@cake), { class: "btn-my_cake_request" } do %>
     <span class="label label-primary">My Cake Requests</span>
@@ -37,9 +38,10 @@
   <span class="label label-success">Delete Cake</span>
 <% end %>
 </form>
+<% end %>
 </div>
 
-<% end %>
+
 
 
 
