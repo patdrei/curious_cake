@@ -8,7 +8,7 @@
   <div class="row justify-content-center mt-3">
     <div class=" row justify-space-around">
       <% @payments.each_with_index do |payment, i| %>
-        <div class="label-<%=i+1%>"> <%=  payment %> </div>
+        <div class="label-<%=((i+1) % 2)+1%> m-1"> <%=  payment %> </div>
       <% end %>
     </div>
   </div>
