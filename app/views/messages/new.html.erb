@@ -1,0 +1,13 @@
+<%= @request.cake.name %>
+
+<%= @messages %>
+
+<div class="form">
+  <%= simple_form_for [@request, @message] do |f| %>
+    <%= f.input :content %>
+    <%= f.button :submit, class: "cake-button" %>
+    </div>
+  <% end %>
+  <br></br>
+  <br></br>
+</div>
