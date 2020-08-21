@@ -47,7 +47,22 @@
 }
 
 .outside-border {
-  border: 0.5px solid #ccc;
   border-radius: 5px;
+}
+
+.outside-grey{
+  border: 0.5px solid #ccc;
   padding: 10px 0px 5px 0px;
+  margin: 5px 50px 5px 50px;
+}
+
+.outside-pink{
+  border: 0.5px solid rgb(255, 214, 218);
+  padding: 10px 0px 5px 0px;
+  margin: 5px 30px 5px 30px;
+}
+
+
+.outside-shadow {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
