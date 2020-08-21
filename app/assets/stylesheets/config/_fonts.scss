@@ -1,13 +1,19 @@
 // Import Google fonts
 
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Cormorant+Garamond:ital@1&family=Quicksand&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Crimson+Text&family=Mukta&family=Noto+Sans&family=Overpass&display=swap');
+
 // @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Shadows+Into+Light&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Quicksand&family=Shadows+Into+Light&display=swap');
 // Define fonts for body and headers
 
-$body-font: 'Amatic SC', cursive;
-$headers-font: 'Amatic SC', cursive;
+// $body-font: 'Amatic SC', cursive;
+// $headers-font: 'Amatic SC', cursive;
+
+$body-font: 'Archivo', sans-serif;
+$headers-font: 'Archivo', sans-serif;
+
 // $body-font: 'Quicksand', sans-serif;
 // $headers-font: 'Quicksand', sans-serif;
 
