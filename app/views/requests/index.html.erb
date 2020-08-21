@@ -7,11 +7,13 @@
   <div class="notification-content">
     <p><small> <%= request.user.email %> </small></p>
     <p> <%= request.content %></p>
-    <div class='box'>
+    <div class='border-left border-primary pl-2'>
       <p> <%= request.compensation_offered %></p>
     </div>
   </div>
   <div class="notification-actions">
+    <div class="border-right text-center pr-2 mr-2"><p> <strong><%= request.requested_slices %></strong>  slices</p></div>
+
     <%= link_to "messages", new_request_message_path(request) %>
     <%= link_to "accept", accept_path(request), method: :patch %>
     <%= link_to "decline", decline_path(request), method: :patch %>

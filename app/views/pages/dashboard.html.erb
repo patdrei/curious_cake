@@ -1,17 +1,17 @@
-<div class="container pl-3 py-3 bg-primary">
+<div class="container pl-3 py-3">
   <h1>Dashboard</h1>
   <h4>Hi <%= @user.email %> </h4>
   <h5>here you can see all your cakes and reuquests</h5>
 </div>
 
-<div class="container pl-5 py-3 border-bottom border-primary">
+<div class="container pl-5 py-3 bg-primary">
 <h2>Your Cakes</h2>
 </div>
 <% @cakes.each do |cake| %>
 <%= link_to cake_path(cake) do%>
   <div class="card-product pl-1">
     <% if cake.photo.attached? %>
-      <%= cl_image_tag cake.photo.key, height: 300, width: 400, crop: :fill ,class: "img"%>
+      <%= cl_image_tag cake.photo.key, height: 300, width: 400, crop: :fill ,class: "img rounded"%>
     <% else %>
       <img src="https://images.squarespace-cdn.com/content/v1/59a2ccae6f4ca3e5e083e88f/1513817365291-66JTKOOZMX92XHITHXL5/ke17ZwdGBToddI8pDm48kKlCTFxidccknsm1vdd2hc9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIGrHOLo6PPE-cvgMUevVYsFUAYQrTS26zLAU8hbtgbMQKMshLAGzx4R3EDFOm1kBS/Kenwood_Jordan_Food%2829of32%29.jpg">
     <% end  %>
@@ -31,11 +31,12 @@
   <div class="notification-content">
     <p><small> <%= request.user.email %> </small></p>
     <p> <%= request.content %></p>
-    <div class='box'>
+    <div class='border-left border-primary pl-2'>
       <p> <%= request.compensation_offered %></p>
     </div>
   </div>
   <div class="notification-actions">
+    <div class="border-right text-center pr-2 mr-2"><p> <strong><%= request.requested_slices %></strong>  slices</p></div>
     <%= link_to "messages", new_request_message_path(request) %>
     <%= link_to "accept", accept_path(request), method: :patch %>
     <%= link_to "decline", decline_path(request), method: :patch %>
@@ -46,7 +47,7 @@
 </div>
 <% end %>
 
-<div class="container pl-5 py-3 my-3 border-bottom border-top border-primary">
+<div class="container pl-5 py-3 my-3 border-bottom bg-primary">
   <h2>Cakes You requested</h2>
 </div>
 
@@ -56,7 +57,7 @@
 
 <div class="notification <%= request.status %> mt-1">
   <% if request.cake.photo.attached? %>
-      <%= cl_image_tag request.cake.photo.key, height: 50, width: 50, crop: :fill ,class: "img avatar-large"%>
+      <%= cl_image_tag request.cake.photo.key, height: 50, width: 50, crop: :fill ,class: "img rounded"%>
     <% else %>
       <img src="https://images.squarespace-cdn.com/content/v1/59a2ccae6f4ca3e5e083e88f/1513817365291-66JTKOOZMX92XHITHXL5/ke17ZwdGBToddI8pDm48kKlCTFxidccknsm1vdd2hc9Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIGrHOLo6PPE-cvgMUevVYsFUAYQrTS26zLAU8hbtgbMQKMshLAGzx4R3EDFOm1kBS/Kenwood_Jordan_Food%2829of32%29.jpg" class="avatar-large">
     <% end  %>
