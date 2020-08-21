@@ -79,6 +79,6 @@ class RequestsController < ApplicationController
   end
 
   def request_params
-    params.require(:request).permit(:cake_id, :user_id, :requested_slices, :status, :compensation_offered, :content)
+    params.require(:request).permit(:cake_id, :user_id, :requested_slices, :status, :compensation_offered, :content, :calculated_slices)
   end
 end

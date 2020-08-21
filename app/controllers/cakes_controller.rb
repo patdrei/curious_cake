@@ -24,6 +24,7 @@ class CakesController < ApplicationController
     @cake = Cake.new(cake_params)
     @cake.user = current_user
     authorize @cake
+    @cake.calculated_slices = @cake.available_slices
 
     if @cake.save
       redirect_to cake_path(@cake), notice: 'Cake was successfully added.'
