@@ -51,7 +51,8 @@ class RequestsController < ApplicationController
     @cake = @request.cake
     @cake.calculated_slices = @cake.available_slices - @request.requested_slices
     @cake.save
-    redirect_to cake_requests_path(@request.cake)
+    # redirect_to cake_requests_path(@request.cake)
+    redirect_to :back
   end
 
   def decline
