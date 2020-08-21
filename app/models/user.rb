@@ -5,5 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :cakes
   has_many :requests
+  has_many :messages
   has_one_attached :photo
 end
