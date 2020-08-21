@@ -1,12 +1,12 @@
 <div class="text-center">
-  <div class="outside-border outside-shadow outside-pink">
+  <div class="outside-border outside-shadow outside-pink p-2 d-flex flex-column align-items-center">
     <h1 class="page-inline-headers mt-3"><%= @cake.name  %></h1>
     <% if @cake.photo.attached? %>
     <div class="row justify-content-center mb-3"><%= cl_image_tag @cake.photo.key, height: 300, width:
     300, radius: 20, crop: :scale %>
     </div>
     <% end %>
-    <div class="outside-border outside-grey">
+    <div class="outside-border outside-grey w-100">
       <p class="description">Payment methods offered </p>
       <div class="row justify-content-center">
         <div class="row justify-space-around">
@@ -16,17 +16,19 @@
         </div>
       </div>
     </div>
-    <div class="mt-3 outside-border outside-grey">
+    <div class="mt-3 outside-border outside-grey w-100">
       <p class="description">Description</p>
       <p class="mb-0"><%= @cake.description %></p>
     </div>
-    <div class="mt-3 outside-border outside-grey">
+    <div class="mt-3 outside-border outside-grey w-100">
       <p class="description">Available slices</p>
       <p class="mb-0"><%= @cake.calculated_slices ? @cake.calculated_slices : @cake.available_slices %></p>
     </div>
     <% unless @owner %>
     <div class="row justify-content-center">
-      <div class="cake-button mt-3 mb-3">
+
+      <div class="cake-button mt-3 mb-3 w-75">
+
         <%= link_to "Request this Cake", new_cake_request_path(@cake) %>
       </div>
     </div>
