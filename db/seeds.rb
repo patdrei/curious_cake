@@ -21,7 +21,7 @@ user = User.create(
 
 Cake.create([{
   user_id: user.id,
-  name: "Summer Berry Grunt",
+  name: "Strawberry Cake",
   description: "The line between cobbler and grunt is a fine one, but essentially a grunt is a cobbler that's slow-cooked on the stovetop.",
   ingredients: " blackberries, blueberries, fresh lemon juice, cinnamon, vanilla",
   available_slices: 8,
@@ -32,7 +32,7 @@ Cake.create([{
 
 {
   user_id: user.id,
-  name: "Tiny Raspberry Fools",
+  name: "Rasberry Pudding",
   description: "Fools are old-fashioned English desserts with loads of bright, tangy flavor.",
   ingredients: "rasberry, ",
   available_slices: 2,
@@ -52,7 +52,7 @@ Cake.create([{
 },
 {
   user_id: user.id,
-  name: "Old-Fashioned Apple Pandowdy",
+  name: "Apple Pie",
   description: "The pandowdy is another cobbler variation with a crumbly crust that's broken up by the juices of the fruit as it cooks",
   ingredients: "Molasse, lemon juice, cinnamon, vanilla, granny smith apples, nutmeg, crumble.",
   available_slices: 6,
@@ -62,7 +62,7 @@ Cake.create([{
 },
 {
   user_id: user.id,
-  name: "Singin' Hinnies",
+  name: "Banana Tart",
   description: "Lovely, sweet griddle cakes that sizzle and sing as they hit the pan. Hinney is how 'honey' is pronounced in Northeast England..",
   ingredients: "Cream of tartar, dried fruit (currants, sultanas, and raisins), serving Suggestions: butter, granulated sugar",
   available_slices: 10,
