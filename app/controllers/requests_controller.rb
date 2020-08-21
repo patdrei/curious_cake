@@ -52,14 +52,14 @@ class RequestsController < ApplicationController
     @cake.calculated_slices -= @request.requested_slices
     @cake.save
     # redirect_to cake_requests_path(@request.cake)
-    redirect_to :back
+    redirect_to dashboard_path
   end
 
   def decline
     set_request
     @request.status = "declined"
     @request.save
-    redirect_to cake_requests_path(@request.cake)
+    redirect_to dashboard_path
   end
 
   private
