@@ -12,6 +12,7 @@
     </div>
   </div>
   <div class="notification-actions">
+    <%= link_to "messages", new_request_message_path(request) %>
     <%= link_to "accept", accept_path(request), method: :patch %>
     <%= link_to "decline", decline_path(request), method: :patch %>
   </div>
