@@ -49,7 +49,7 @@ class RequestsController < ApplicationController
     @request.status = "accepted"
     @request.save
     @cake = @request.cake
-    @cake.calculated_slices = @cake.available_slices - @request.requested_slices
+    @cake.calculated_slices -= @request.requested_slices
     @cake.save
     redirect_to cake_requests_path(@request.cake)
   end
