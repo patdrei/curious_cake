@@ -1,6 +1,8 @@
 <%= @request.cake.name %>
 
-<%= @messages %>
+<% @messages.each do |message| %>
+<%= message.content %> <br>
+<% end %>
 
 <div class="form">
   <%= simple_form_for [@request, @message] do |f| %>
