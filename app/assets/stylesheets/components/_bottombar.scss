@@ -1,6 +1,6 @@
 .bottombar{
   justify-content: space-between;
-  background-color: rgba(102, 0, 19, 0.9);
+  background-color: rgba(102, 0, 19, 0.7);
   backdrop-filter: blur(4px);
   position: sticky;
   bottom: 0px;
@@ -12,7 +12,8 @@
 }
 
 .bottombar h4{
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: white;
+  font-size: 18px;
 }
